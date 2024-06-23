@@ -1,13 +1,12 @@
 name: SBOM upload from Trivy
 
 on:
-  push:
-    branches-ignore:
-      - "renovate-and-workflow-files"
+  push: {}
   workflow_dispatch: {}
 
 jobs:
   SBOM-upload:
+    if: github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
