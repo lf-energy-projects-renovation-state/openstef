@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>openstef package &#8212; OpenSTEF  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script src="_static/documentation_options.js?v=8a448e45"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'openstef';</script>
+    <link rel="icon" href="_static/openstef.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="openstef.data_classes package" href="openstef.data_classes.html" />
+    <link rel="prev" title="API reference" href="api_reference.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="_static/logo_openstef_small.png" class="logo__image only-light" alt="Logo image">
+    <img src="_static/logo_openstef_small.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="about_openstef.html">
+                        About OpenSTEF
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="user_guides.html">
+                        User guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="architecture_methodology_components.html">
+                        Architecture, Methodology, and Components
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="api_reference.html">
+                        API reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="community.html">
+                        Community
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenSTEF/openstef" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/openstef/" title="Pypi" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fas fa-gift"></i></span>
+            <label class="sr-only">Pypi</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.lfenergy.org/projects/openstef/" title="LFE Homepage" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fas fa-bolt"></i></span>
+            <label class="sr-only">LFE Homepage</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="about_openstef.html">
+                        About OpenSTEF
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="user_guides.html">
+                        User guides
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="architecture_methodology_components.html">
+                        Architecture, Methodology, and Components
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="api_reference.html">
+                        API reference
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="community.html">
+                        Community
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/OpenSTEF/openstef" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/openstef/" title="Pypi" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fas fa-gift"></i></span>
+            <label class="sr-only">Pypi</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.lfenergy.org/projects/openstef/" title="LFE Homepage" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fas fa-bolt"></i></span>
+            <label class="sr-only">LFE Homepage</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Section navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">
+    Section Navigation
+  </p>
+  <div class="bd-toc-item navbar-nav">
+    <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="openstef.data_classes.html">openstef.data_classes package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.feature_engineering.html">openstef.feature_engineering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.metrics.html">openstef.metrics package</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="openstef.model.html">openstef.model package</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model.metamodels.html">openstef.model.metamodels package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model.regressors.html">openstef.model.regressors package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.model_selection.html">openstef.model_selection package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.monitoring.html">openstef.monitoring package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.pipeline.html">openstef.pipeline package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.postprocessing.html">openstef.postprocessing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.preprocessing.html">openstef.preprocessing package</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="openstef.tasks.html">openstef.tasks package</a><input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstef.tasks.utils.html">openstef.tasks.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.validation.html">openstef.validation package</a></li>
+</ul>
+
+  </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <section id="openstef-package">
+<h1>openstef package<a class="headerlink" href="#openstef-package" title="Link to this heading">¶</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="openstef.data_classes.html">openstef.data_classes package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstef.data_classes.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.data_classes.html#module-openstef.data_classes.data_prep">openstef.data_classes.data_prep module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.data_prep.DataPrepDataClass"><code class="docutils literal notranslate"><span class="pre">DataPrepDataClass</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.data_prep.DataPrepDataClass.arguments"><code class="docutils literal notranslate"><span class="pre">DataPrepDataClass.arguments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.data_prep.DataPrepDataClass.klass"><code class="docutils literal notranslate"><span class="pre">DataPrepDataClass.klass</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.data_prep.DataPrepDataClass.load"><code class="docutils literal notranslate"><span class="pre">DataPrepDataClass.load()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.data_classes.html#module-openstef.data_classes.model_specifications">openstef.data_classes.model_specifications module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.model_specifications.ModelSpecificationDataClass"><code class="docutils literal notranslate"><span class="pre">ModelSpecificationDataClass</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.model_specifications.ModelSpecificationDataClass.feature_modules"><code class="docutils literal notranslate"><span class="pre">ModelSpecificationDataClass.feature_modules</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.model_specifications.ModelSpecificationDataClass.feature_names"><code class="docutils literal notranslate"><span class="pre">ModelSpecificationDataClass.feature_names</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.model_specifications.ModelSpecificationDataClass.hyper_params"><code class="docutils literal notranslate"><span class="pre">ModelSpecificationDataClass.hyper_params</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.model_specifications.ModelSpecificationDataClass.id"><code class="docutils literal notranslate"><span class="pre">ModelSpecificationDataClass.id</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.data_classes.html#module-openstef.data_classes.prediction_job">openstef.data_classes.prediction_job module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.Config"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.alternative_forecast_model_pid"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.alternative_forecast_model_pid</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.backtest_split_func"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.backtest_split_func</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.completeness_threshold"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.completeness_threshold</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.data_prep_class"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.data_prep_class</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.default_modelspecs"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.default_modelspecs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.depends_on"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.depends_on</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.description"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.flatliner_threshold_minutes"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.flatliner_threshold_minutes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.forecast_type"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.forecast_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.get"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.get()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.horizon_minutes"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.horizon_minutes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.hub_height"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.hub_height</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.id"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.lat"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.lat</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.lon"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.lon</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.minimal_table_length"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.minimal_table_length</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.model"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.model_kwargs"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.model_kwargs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.n_turbines"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.n_turbines</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.name"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.pipelines_to_run"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.pipelines_to_run</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.quantiles"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.quantiles</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.resolution_minutes"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.resolution_minutes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.save_train_forecasts"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.save_train_forecasts</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.sid"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.sid</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.train_components"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.train_components</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.train_horizons_minutes"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.train_horizons_minutes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.train_split_func"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.train_split_func</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass.turbine_type"><code class="docutils literal notranslate"><span class="pre">PredictionJobDataClass.turbine_type</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.data_classes.html#module-openstef.data_classes.split_function">openstef.data_classes.split_function module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.split_function.SplitFuncDataClass"><code class="docutils literal notranslate"><span class="pre">SplitFuncDataClass</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.split_function.SplitFuncDataClass.arguments"><code class="docutils literal notranslate"><span class="pre">SplitFuncDataClass.arguments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.split_function.SplitFuncDataClass.function"><code class="docutils literal notranslate"><span class="pre">SplitFuncDataClass.function</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.split_function.SplitFuncDataClass.load"><code class="docutils literal notranslate"><span class="pre">SplitFuncDataClass.load()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.data_classes.html#module-openstef.data_classes">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.feature_engineering.html">openstef.feature_engineering package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstef.feature_engineering.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.apply_features">openstef.feature_engineering.apply_features module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.apply_features.apply_features"><code class="docutils literal notranslate"><span class="pre">apply_features()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.data_preparation">openstef.feature_engineering.data_preparation module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.data_preparation.ARDataPreparation"><code class="docutils literal notranslate"><span class="pre">ARDataPreparation</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.data_preparation.ARDataPreparation.prepare_forecast_data"><code class="docutils literal notranslate"><span class="pre">ARDataPreparation.prepare_forecast_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.data_preparation.ARDataPreparation.prepare_train_data"><code class="docutils literal notranslate"><span class="pre">ARDataPreparation.prepare_train_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.data_preparation.AbstractDataPreparation"><code class="docutils literal notranslate"><span class="pre">AbstractDataPreparation</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.data_preparation.AbstractDataPreparation.check_model"><code class="docutils literal notranslate"><span class="pre">AbstractDataPreparation.check_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.data_preparation.AbstractDataPreparation.prepare_forecast_data"><code class="docutils literal notranslate"><span class="pre">AbstractDataPreparation.prepare_forecast_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.data_preparation.AbstractDataPreparation.prepare_train_data"><code class="docutils literal notranslate"><span class="pre">AbstractDataPreparation.prepare_train_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.data_preparation.LegacyDataPreparation"><code class="docutils literal notranslate"><span class="pre">LegacyDataPreparation</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.data_preparation.LegacyDataPreparation.prepare_forecast_data"><code class="docutils literal notranslate"><span class="pre">LegacyDataPreparation.prepare_forecast_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.data_preparation.LegacyDataPreparation.prepare_train_data"><code class="docutils literal notranslate"><span class="pre">LegacyDataPreparation.prepare_train_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.feature_adder">openstef.feature_engineering.feature_adder module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_adder.FeatureAdder"><code class="docutils literal notranslate"><span class="pre">FeatureAdder</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_adder.FeatureAdder.apply_features"><code class="docutils literal notranslate"><span class="pre">FeatureAdder.apply_features()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_adder.FeatureAdder.name"><code class="docutils literal notranslate"><span class="pre">FeatureAdder.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_adder.FeatureAdder.parse_feature_name"><code class="docutils literal notranslate"><span class="pre">FeatureAdder.parse_feature_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_adder.FeatureAdder.required_features"><code class="docutils literal notranslate"><span class="pre">FeatureAdder.required_features()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_adder.FeatureDispatcher"><code class="docutils literal notranslate"><span class="pre">FeatureDispatcher</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_adder.FeatureDispatcher.apply_features"><code class="docutils literal notranslate"><span class="pre">FeatureDispatcher.apply_features()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_adder.FeatureDispatcher.dispatch_features"><code class="docutils literal notranslate"><span class="pre">FeatureDispatcher.dispatch_features()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_adder.ParsedFeature"><code class="docutils literal notranslate"><span class="pre">ParsedFeature</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_adder.ParsedFeature.name"><code class="docutils literal notranslate"><span class="pre">ParsedFeature.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_adder.ParsedFeature.params"><code class="docutils literal notranslate"><span class="pre">ParsedFeature.params</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_adder.adders_from_module"><code class="docutils literal notranslate"><span class="pre">adders_from_module()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_adder.adders_from_modules"><code class="docutils literal notranslate"><span class="pre">adders_from_modules()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.feature_applicator">openstef.feature_engineering.feature_applicator module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_applicator.AbstractFeatureApplicator"><code class="docutils literal notranslate"><span class="pre">AbstractFeatureApplicator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_applicator.AbstractFeatureApplicator.add_features"><code class="docutils literal notranslate"><span class="pre">AbstractFeatureApplicator.add_features()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_applicator.OperationalPredictFeatureApplicator"><code class="docutils literal notranslate"><span class="pre">OperationalPredictFeatureApplicator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_applicator.OperationalPredictFeatureApplicator.add_features"><code class="docutils literal notranslate"><span class="pre">OperationalPredictFeatureApplicator.add_features()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_applicator.TrainFeatureApplicator"><code class="docutils literal notranslate"><span class="pre">TrainFeatureApplicator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.feature_applicator.TrainFeatureApplicator.add_features"><code class="docutils literal notranslate"><span class="pre">TrainFeatureApplicator.add_features()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.general">openstef.feature_engineering.general module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.general.add_missing_feature_columns"><code class="docutils literal notranslate"><span class="pre">add_missing_feature_columns()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.general.enforce_feature_order"><code class="docutils literal notranslate"><span class="pre">enforce_feature_order()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.general.remove_non_requested_feature_columns"><code class="docutils literal notranslate"><span class="pre">remove_non_requested_feature_columns()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.holiday_features">openstef.feature_engineering.holiday_features module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.holiday_features.check_for_bridge_day"><code class="docutils literal notranslate"><span class="pre">check_for_bridge_day()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.holiday_features.generate_holiday_feature_functions"><code class="docutils literal notranslate"><span class="pre">generate_holiday_feature_functions()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.lag_features">openstef.feature_engineering.lag_features module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.lag_features.extract_lag_features"><code class="docutils literal notranslate"><span class="pre">extract_lag_features()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.lag_features.generate_lag_feature_functions"><code class="docutils literal notranslate"><span class="pre">generate_lag_feature_functions()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.lag_features.generate_non_trivial_lag_times"><code class="docutils literal notranslate"><span class="pre">generate_non_trivial_lag_times()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.lag_features.generate_trivial_lag_features"><code class="docutils literal notranslate"><span class="pre">generate_trivial_lag_features()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.missing_values_transformer">openstef.feature_engineering.missing_values_transformer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.missing_values_transformer.MissingValuesTransformer"><code class="docutils literal notranslate"><span class="pre">MissingValuesTransformer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.missing_values_transformer.MissingValuesTransformer.fit"><code class="docutils literal notranslate"><span class="pre">MissingValuesTransformer.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.missing_values_transformer.MissingValuesTransformer.fit_transform"><code class="docutils literal notranslate"><span class="pre">MissingValuesTransformer.fit_transform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.missing_values_transformer.MissingValuesTransformer.in_feature_names"><code class="docutils literal notranslate"><span class="pre">MissingValuesTransformer.in_feature_names</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.missing_values_transformer.MissingValuesTransformer.non_null_feature_names"><code class="docutils literal notranslate"><span class="pre">MissingValuesTransformer.non_null_feature_names</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.missing_values_transformer.MissingValuesTransformer.transform"><code class="docutils literal notranslate"><span class="pre">MissingValuesTransformer.transform()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.weather_features">openstef.feature_engineering.weather_features module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.weather_features.add_additional_solar_features"><code class="docutils literal notranslate"><span class="pre">add_additional_solar_features()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.weather_features.add_additional_wind_features"><code class="docutils literal notranslate"><span class="pre">add_additional_wind_features()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.weather_features.add_humidity_features"><code class="docutils literal notranslate"><span class="pre">add_humidity_features()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.weather_features.calc_air_density"><code class="docutils literal notranslate"><span class="pre">calc_air_density()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.weather_features.calc_dewpoint"><code class="docutils literal notranslate"><span class="pre">calc_dewpoint()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.weather_features.calc_saturation_pressure"><code class="docutils literal notranslate"><span class="pre">calc_saturation_pressure()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.weather_features.calc_vapour_pressure"><code class="docutils literal notranslate"><span class="pre">calc_vapour_pressure()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.weather_features.calculate_dni"><code class="docutils literal notranslate"><span class="pre">calculate_dni()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.weather_features.calculate_gti"><code class="docutils literal notranslate"><span class="pre">calculate_gti()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.weather_features.calculate_windspeed_at_hubheight"><code class="docutils literal notranslate"><span class="pre">calculate_windspeed_at_hubheight()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.weather_features.calculate_windturbine_power_output"><code class="docutils literal notranslate"><span class="pre">calculate_windturbine_power_output()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.feature_engineering.html#openstef.feature_engineering.weather_features.humidity_calculations"><code class="docutils literal notranslate"><span class="pre">humidity_calculations()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.metrics.html">openstef.metrics package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstef.metrics.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.metrics.html#module-openstef.metrics.figure">openstef.metrics.figure module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.figure.convert_to_base64_data_uri"><code class="docutils literal notranslate"><span class="pre">convert_to_base64_data_uri()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.figure.plot_data_series"><code class="docutils literal notranslate"><span class="pre">plot_data_series()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.figure.plot_feature_importance"><code class="docutils literal notranslate"><span class="pre">plot_feature_importance()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.metrics.html#module-openstef.metrics.metrics">openstef.metrics.metrics module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.arctan_loss"><code class="docutils literal notranslate"><span class="pre">arctan_loss()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.bias"><code class="docutils literal notranslate"><span class="pre">bias()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.frac_in_stdev"><code class="docutils literal notranslate"><span class="pre">frac_in_stdev()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.franks_skill_score"><code class="docutils literal notranslate"><span class="pre">franks_skill_score()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.franks_skill_score_peaks"><code class="docutils literal notranslate"><span class="pre">franks_skill_score_peaks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.get_eval_metric_function"><code class="docutils literal notranslate"><span class="pre">get_eval_metric_function()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.mae"><code class="docutils literal notranslate"><span class="pre">mae()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.nsme"><code class="docutils literal notranslate"><span class="pre">nsme()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.r_mae"><code class="docutils literal notranslate"><span class="pre">r_mae()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.r_mae_highest"><code class="docutils literal notranslate"><span class="pre">r_mae_highest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.r_mae_lowest"><code class="docutils literal notranslate"><span class="pre">r_mae_lowest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.r_mne_highest"><code class="docutils literal notranslate"><span class="pre">r_mne_highest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.r_mpe_highest"><code class="docutils literal notranslate"><span class="pre">r_mpe_highest()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.rmse"><code class="docutils literal notranslate"><span class="pre">rmse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.skill_score"><code class="docutils literal notranslate"><span class="pre">skill_score()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.skill_score_positive_peaks"><code class="docutils literal notranslate"><span class="pre">skill_score_positive_peaks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.xgb_quantile_eval"><code class="docutils literal notranslate"><span class="pre">xgb_quantile_eval()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.metrics.xgb_quantile_obj"><code class="docutils literal notranslate"><span class="pre">xgb_quantile_obj()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.metrics.html#module-openstef.metrics.reporter">openstef.metrics.reporter module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.reporter.Report"><code class="docutils literal notranslate"><span class="pre">Report</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.reporter.Reporter"><code class="docutils literal notranslate"><span class="pre">Reporter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.reporter.Reporter.generate_report"><code class="docutils literal notranslate"><span class="pre">Reporter.generate_report()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.reporter.Reporter.get_fiabilities"><code class="docutils literal notranslate"><span class="pre">Reporter.get_fiabilities()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.reporter.Reporter.get_metrics"><code class="docutils literal notranslate"><span class="pre">Reporter.get_metrics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.metrics.html#openstef.metrics.reporter.Reporter.write_report_to_disk"><code class="docutils literal notranslate"><span class="pre">Reporter.write_report_to_disk()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.metrics.html#module-openstef.metrics">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.model.html">openstef.model package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.metamodels.html">openstef.model.metamodels package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.metamodels.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.metamodels.html#module-openstef.model.metamodels.grouped_regressor">openstef.model.metamodels.grouped_regressor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.metamodels.html#module-openstef.model.metamodels.missing_values_handler">openstef.model.metamodels.missing_values_handler module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.metamodels.html#module-openstef.model.metamodels">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.regressors.html">openstef.model.regressors package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.arima">openstef.model.regressors.arima module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.custom_regressor">openstef.model.regressors.custom_regressor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.dazls">openstef.model.regressors.dazls module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.flatliner">openstef.model.regressors.flatliner module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.lgbm">openstef.model.regressors.lgbm module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.linear">openstef.model.regressors.linear module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.linear_quantile">openstef.model.regressors.linear_quantile module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.regressor">openstef.model.regressors.regressor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.xgb">openstef.model.regressors.xgb module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.xgb_multioutput_quantile">openstef.model.regressors.xgb_multioutput_quantile module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.xgb_quantile">openstef.model.regressors.xgb_quantile module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model.html#module-openstef.model.basecase">openstef.model.basecase module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.basecase.BaseCaseModel"><code class="docutils literal notranslate"><span class="pre">BaseCaseModel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.basecase.BaseCaseModel.can_predict_quantiles"><code class="docutils literal notranslate"><span class="pre">BaseCaseModel.can_predict_quantiles</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.basecase.BaseCaseModel.fit"><code class="docutils literal notranslate"><span class="pre">BaseCaseModel.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.basecase.BaseCaseModel.make_basecase_forecast"><code class="docutils literal notranslate"><span class="pre">BaseCaseModel.make_basecase_forecast()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.basecase.BaseCaseModel.predict"><code class="docutils literal notranslate"><span class="pre">BaseCaseModel.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.basecase.BaseCaseModel.set_predict_request"><code class="docutils literal notranslate"><span class="pre">BaseCaseModel.set_predict_request()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.basecase.BaseCaseModel.set_score_request"><code class="docutils literal notranslate"><span class="pre">BaseCaseModel.set_score_request()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model.html#module-openstef.model.confidence_interval_applicator">openstef.model.confidence_interval_applicator module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.confidence_interval_applicator.ConfidenceIntervalApplicator"><code class="docutils literal notranslate"><span class="pre">ConfidenceIntervalApplicator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.confidence_interval_applicator.ConfidenceIntervalApplicator.add_confidence_interval"><code class="docutils literal notranslate"><span class="pre">ConfidenceIntervalApplicator.add_confidence_interval()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model.html#module-openstef.model.fallback">openstef.model.fallback module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.fallback.generate_fallback"><code class="docutils literal notranslate"><span class="pre">generate_fallback()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model.html#module-openstef.model.model_creator">openstef.model.model_creator module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.model_creator.ModelCreator"><code class="docutils literal notranslate"><span class="pre">ModelCreator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.model_creator.ModelCreator.MODEL_CONSTRUCTORS"><code class="docutils literal notranslate"><span class="pre">ModelCreator.MODEL_CONSTRUCTORS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.model_creator.ModelCreator.create_model"><code class="docutils literal notranslate"><span class="pre">ModelCreator.create_model()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model.html#module-openstef.model.objective">openstef.model.objective module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.objective.ARIMARegressorObjective"><code class="docutils literal notranslate"><span class="pre">ARIMARegressorObjective</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.ARIMARegressorObjective.get_params"><code class="docutils literal notranslate"><span class="pre">ARIMARegressorObjective.get_params()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.objective.LGBRegressorObjective"><code class="docutils literal notranslate"><span class="pre">LGBRegressorObjective</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.LGBRegressorObjective.get_params"><code class="docutils literal notranslate"><span class="pre">LGBRegressorObjective.get_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.LGBRegressorObjective.get_pruning_callback"><code class="docutils literal notranslate"><span class="pre">LGBRegressorObjective.get_pruning_callback()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.objective.LinearRegressorObjective"><code class="docutils literal notranslate"><span class="pre">LinearRegressorObjective</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.LinearRegressorObjective.get_params"><code class="docutils literal notranslate"><span class="pre">LinearRegressorObjective.get_params()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.objective.RegressorObjective"><code class="docutils literal notranslate"><span class="pre">RegressorObjective</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.RegressorObjective.create_report"><code class="docutils literal notranslate"><span class="pre">RegressorObjective.create_report()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.RegressorObjective.get_default_values"><code class="docutils literal notranslate"><span class="pre">RegressorObjective.get_default_values()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.RegressorObjective.get_params"><code class="docutils literal notranslate"><span class="pre">RegressorObjective.get_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.RegressorObjective.get_pruning_callback"><code class="docutils literal notranslate"><span class="pre">RegressorObjective.get_pruning_callback()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.RegressorObjective.get_trial_track"><code class="docutils literal notranslate"><span class="pre">RegressorObjective.get_trial_track()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.objective.XGBMultioutputQuantileRegressorObjective"><code class="docutils literal notranslate"><span class="pre">XGBMultioutputQuantileRegressorObjective</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.XGBMultioutputQuantileRegressorObjective.get_params"><code class="docutils literal notranslate"><span class="pre">XGBMultioutputQuantileRegressorObjective.get_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.XGBMultioutputQuantileRegressorObjective.get_pruning_callback"><code class="docutils literal notranslate"><span class="pre">XGBMultioutputQuantileRegressorObjective.get_pruning_callback()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.objective.XGBQuantileRegressorObjective"><code class="docutils literal notranslate"><span class="pre">XGBQuantileRegressorObjective</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.XGBQuantileRegressorObjective.get_params"><code class="docutils literal notranslate"><span class="pre">XGBQuantileRegressorObjective.get_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.XGBQuantileRegressorObjective.get_pruning_callback"><code class="docutils literal notranslate"><span class="pre">XGBQuantileRegressorObjective.get_pruning_callback()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.objective.XGBRegressorObjective"><code class="docutils literal notranslate"><span class="pre">XGBRegressorObjective</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.XGBRegressorObjective.get_default_values"><code class="docutils literal notranslate"><span class="pre">XGBRegressorObjective.get_default_values()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.XGBRegressorObjective.get_params"><code class="docutils literal notranslate"><span class="pre">XGBRegressorObjective.get_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective.XGBRegressorObjective.get_pruning_callback"><code class="docutils literal notranslate"><span class="pre">XGBRegressorObjective.get_pruning_callback()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model.html#module-openstef.model.objective_creator">openstef.model.objective_creator module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.objective_creator.ObjectiveCreator"><code class="docutils literal notranslate"><span class="pre">ObjectiveCreator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective_creator.ObjectiveCreator.OBJECTIVES"><code class="docutils literal notranslate"><span class="pre">ObjectiveCreator.OBJECTIVES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.objective_creator.ObjectiveCreator.create_objective"><code class="docutils literal notranslate"><span class="pre">ObjectiveCreator.create_objective()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model.html#module-openstef.model.serializer">openstef.model.serializer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.serializer.MLflowSerializer"><code class="docutils literal notranslate"><span class="pre">MLflowSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.serializer.MLflowSerializer.get_model_age"><code class="docutils literal notranslate"><span class="pre">MLflowSerializer.get_model_age()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.serializer.MLflowSerializer.load_model"><code class="docutils literal notranslate"><span class="pre">MLflowSerializer.load_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.serializer.MLflowSerializer.remove_old_models"><code class="docutils literal notranslate"><span class="pre">MLflowSerializer.remove_old_models()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.serializer.MLflowSerializer.save_model"><code class="docutils literal notranslate"><span class="pre">MLflowSerializer.save_model()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model.html#module-openstef.model.standard_deviation_generator">openstef.model.standard_deviation_generator module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.html#openstef.model.standard_deviation_generator.StandardDeviationGenerator"><code class="docutils literal notranslate"><span class="pre">StandardDeviationGenerator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.html#openstef.model.standard_deviation_generator.StandardDeviationGenerator.generate_standard_deviation_data"><code class="docutils literal notranslate"><span class="pre">StandardDeviationGenerator.generate_standard_deviation_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model.html#module-openstef.model">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.model_selection.html">openstef.model_selection package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model_selection.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model_selection.html#module-openstef.model_selection.model_selection">openstef.model_selection.model_selection module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model_selection.html#openstef.model_selection.model_selection.backtest_split_default"><code class="docutils literal notranslate"><span class="pre">backtest_split_default()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model_selection.html#openstef.model_selection.model_selection.group_kfold"><code class="docutils literal notranslate"><span class="pre">group_kfold()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model_selection.html#openstef.model_selection.model_selection.random_sample"><code class="docutils literal notranslate"><span class="pre">random_sample()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model_selection.html#openstef.model_selection.model_selection.sample_indices_train_val"><code class="docutils literal notranslate"><span class="pre">sample_indices_train_val()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model_selection.html#openstef.model_selection.model_selection.split_data_train_validation_test"><code class="docutils literal notranslate"><span class="pre">split_data_train_validation_test()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model_selection.html#module-openstef.model_selection">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.monitoring.html">openstef.monitoring package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstef.monitoring.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.monitoring.html#module-openstef.monitoring.performance_meter">openstef.monitoring.performance_meter module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.monitoring.html#openstef.monitoring.performance_meter.PerformanceMeter"><code class="docutils literal notranslate"><span class="pre">PerformanceMeter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.monitoring.html#openstef.monitoring.performance_meter.PerformanceMeter.checkpoint"><code class="docutils literal notranslate"><span class="pre">PerformanceMeter.checkpoint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.monitoring.html#openstef.monitoring.performance_meter.PerformanceMeter.complete_level"><code class="docutils literal notranslate"><span class="pre">PerformanceMeter.complete_level()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.monitoring.html#openstef.monitoring.performance_meter.PerformanceMeter.start_level"><code class="docutils literal notranslate"><span class="pre">PerformanceMeter.start_level()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.monitoring.html#module-openstef.monitoring.teams">openstef.monitoring.teams module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.monitoring.html#openstef.monitoring.teams.build_sql_query_string"><code class="docutils literal notranslate"><span class="pre">build_sql_query_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.monitoring.html#openstef.monitoring.teams.format_message"><code class="docutils literal notranslate"><span class="pre">format_message()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.monitoring.html#openstef.monitoring.teams.get_card_section"><code class="docutils literal notranslate"><span class="pre">get_card_section()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.monitoring.html#openstef.monitoring.teams.post_teams"><code class="docutils literal notranslate"><span class="pre">post_teams()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.monitoring.html#module-openstef.monitoring">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.pipeline.html">openstef.pipeline package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstef.pipeline.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.pipeline.html#module-openstef.pipeline.create_basecase_forecast">openstef.pipeline.create_basecase_forecast module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.create_basecase_forecast.create_basecase_forecast_pipeline"><code class="docutils literal notranslate"><span class="pre">create_basecase_forecast_pipeline()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.create_basecase_forecast.generate_basecase_confidence_interval"><code class="docutils literal notranslate"><span class="pre">generate_basecase_confidence_interval()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.pipeline.html#module-openstef.pipeline.create_component_forecast">openstef.pipeline.create_component_forecast module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.create_component_forecast.create_components_forecast_pipeline"><code class="docutils literal notranslate"><span class="pre">create_components_forecast_pipeline()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.create_component_forecast.create_input"><code class="docutils literal notranslate"><span class="pre">create_input()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.pipeline.html#module-openstef.pipeline.create_forecast">openstef.pipeline.create_forecast module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.create_forecast.create_forecast_pipeline"><code class="docutils literal notranslate"><span class="pre">create_forecast_pipeline()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.create_forecast.create_forecast_pipeline_core"><code class="docutils literal notranslate"><span class="pre">create_forecast_pipeline_core()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.pipeline.html#module-openstef.pipeline.optimize_hyperparameters">openstef.pipeline.optimize_hyperparameters module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.optimize_hyperparameters.optimize_hyperparameters_pipeline"><code class="docutils literal notranslate"><span class="pre">optimize_hyperparameters_pipeline()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.optimize_hyperparameters.optimize_hyperparameters_pipeline_core"><code class="docutils literal notranslate"><span class="pre">optimize_hyperparameters_pipeline_core()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.optimize_hyperparameters.optuna_optimization"><code class="docutils literal notranslate"><span class="pre">optuna_optimization()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.pipeline.html#module-openstef.pipeline.train_create_forecast_backtest">openstef.pipeline.train_create_forecast_backtest module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.train_create_forecast_backtest.train_model_and_forecast_back_test"><code class="docutils literal notranslate"><span class="pre">train_model_and_forecast_back_test()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.train_create_forecast_backtest.train_model_and_forecast_test_core"><code class="docutils literal notranslate"><span class="pre">train_model_and_forecast_test_core()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.pipeline.html#module-openstef.pipeline.train_model">openstef.pipeline.train_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.train_model.train_model_pipeline"><code class="docutils literal notranslate"><span class="pre">train_model_pipeline()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.train_model.train_model_pipeline_core"><code class="docutils literal notranslate"><span class="pre">train_model_pipeline_core()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.train_model.train_pipeline_common"><code class="docutils literal notranslate"><span class="pre">train_pipeline_common()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.train_model.train_pipeline_step_compute_features"><code class="docutils literal notranslate"><span class="pre">train_pipeline_step_compute_features()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.train_model.train_pipeline_step_load_model"><code class="docutils literal notranslate"><span class="pre">train_pipeline_step_load_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.train_model.train_pipeline_step_split_data"><code class="docutils literal notranslate"><span class="pre">train_pipeline_step_split_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.train_model.train_pipeline_step_train_model"><code class="docutils literal notranslate"><span class="pre">train_pipeline_step_train_model()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.pipeline.html#module-openstef.pipeline.utils">openstef.pipeline.utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.pipeline.html#openstef.pipeline.utils.generate_forecast_datetime_range"><code class="docutils literal notranslate"><span class="pre">generate_forecast_datetime_range()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.pipeline.html#module-openstef.pipeline">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.postprocessing.html">openstef.postprocessing package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstef.postprocessing.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.postprocessing.html#module-openstef.postprocessing.postprocessing">openstef.postprocessing.postprocessing module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.postprocessing.html#openstef.postprocessing.postprocessing.add_components_base_case_forecast"><code class="docutils literal notranslate"><span class="pre">add_components_base_case_forecast()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.postprocessing.html#openstef.postprocessing.postprocessing.add_prediction_job_properties_to_forecast"><code class="docutils literal notranslate"><span class="pre">add_prediction_job_properties_to_forecast()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.postprocessing.html#openstef.postprocessing.postprocessing.calculate_wind_power"><code class="docutils literal notranslate"><span class="pre">calculate_wind_power()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.postprocessing.html#openstef.postprocessing.postprocessing.normalize_and_convert_weather_data_for_splitting"><code class="docutils literal notranslate"><span class="pre">normalize_and_convert_weather_data_for_splitting()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.postprocessing.html#openstef.postprocessing.postprocessing.post_process_wind_solar"><code class="docutils literal notranslate"><span class="pre">post_process_wind_solar()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.postprocessing.html#openstef.postprocessing.postprocessing.sort_quantiles"><code class="docutils literal notranslate"><span class="pre">sort_quantiles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.postprocessing.html#openstef.postprocessing.postprocessing.split_forecast_in_components"><code class="docutils literal notranslate"><span class="pre">split_forecast_in_components()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.postprocessing.html#module-openstef.postprocessing">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.preprocessing.html">openstef.preprocessing package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstef.preprocessing.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.preprocessing.html#module-openstef.preprocessing.preprocessing">openstef.preprocessing.preprocessing module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.preprocessing.html#openstef.preprocessing.preprocessing.replace_repeated_values_with_nan"><code class="docutils literal notranslate"><span class="pre">replace_repeated_values_with_nan()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.preprocessing.html#module-openstef.preprocessing">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.tasks.html">openstef.tasks package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstef.tasks.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.utils.html">openstef.tasks.utils package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.tasks.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.tasks.utils.html#module-openstef.tasks.utils.dependencies">openstef.tasks.utils.dependencies module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.tasks.utils.html#module-openstef.tasks.utils.predictionjobloop">openstef.tasks.utils.predictionjobloop module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.tasks.utils.html#module-openstef.tasks.utils.taskcontext">openstef.tasks.utils.taskcontext module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.tasks.utils.html#module-openstef.tasks.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.tasks.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.tasks.html#module-openstef.tasks.calculate_kpi">openstef.tasks.calculate_kpi module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.calculate_kpi.calc_kpi_for_specific_pid"><code class="docutils literal notranslate"><span class="pre">calc_kpi_for_specific_pid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.calculate_kpi.check_kpi_task"><code class="docutils literal notranslate"><span class="pre">check_kpi_task()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.calculate_kpi.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.calculate_kpi.set_incomplete_kpi_to_nan"><code class="docutils literal notranslate"><span class="pre">set_incomplete_kpi_to_nan()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.tasks.html#module-openstef.tasks.create_basecase_forecast">openstef.tasks.create_basecase_forecast module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_basecase_forecast.create_basecase_forecast_task"><code class="docutils literal notranslate"><span class="pre">create_basecase_forecast_task()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_basecase_forecast.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.tasks.html#module-openstef.tasks.create_components_forecast">openstef.tasks.create_components_forecast module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_components_forecast.create_components_forecast_task"><code class="docutils literal notranslate"><span class="pre">create_components_forecast_task()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_components_forecast.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.tasks.html#module-openstef.tasks.create_forecast">openstef.tasks.create_forecast module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_forecast.create_forecast_task"><code class="docutils literal notranslate"><span class="pre">create_forecast_task()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_forecast.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.tasks.html#module-openstef.tasks.create_solar_forecast">openstef.tasks.create_solar_forecast module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_solar_forecast.apply_fit_insol"><code class="docutils literal notranslate"><span class="pre">apply_fit_insol()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_solar_forecast.apply_persistence"><code class="docutils literal notranslate"><span class="pre">apply_persistence()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_solar_forecast.calc_norm"><code class="docutils literal notranslate"><span class="pre">calc_norm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_solar_forecast.combine_forecasts"><code class="docutils literal notranslate"><span class="pre">combine_forecasts()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_solar_forecast.fides"><code class="docutils literal notranslate"><span class="pre">fides()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_solar_forecast.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_solar_forecast.make_solar_prediction_pj"><code class="docutils literal notranslate"><span class="pre">make_solar_prediction_pj()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.tasks.html#module-openstef.tasks.create_wind_forecast">openstef.tasks.create_wind_forecast module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_wind_forecast.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.create_wind_forecast.make_wind_forecast_pj"><code class="docutils literal notranslate"><span class="pre">make_wind_forecast_pj()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.tasks.html#module-openstef.tasks.optimize_hyperparameters">openstef.tasks.optimize_hyperparameters module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.optimize_hyperparameters.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.optimize_hyperparameters.optimize_hyperparameters_task"><code class="docutils literal notranslate"><span class="pre">optimize_hyperparameters_task()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.tasks.html#module-openstef.tasks.split_forecast">openstef.tasks.split_forecast module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.split_forecast.convert_coefdict_to_coefsdf"><code class="docutils literal notranslate"><span class="pre">convert_coefdict_to_coefsdf()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.split_forecast.determine_invalid_coefs"><code class="docutils literal notranslate"><span class="pre">determine_invalid_coefs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.split_forecast.find_components"><code class="docutils literal notranslate"><span class="pre">find_components()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.split_forecast.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.split_forecast.split_forecast_task"><code class="docutils literal notranslate"><span class="pre">split_forecast_task()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.tasks.html#module-openstef.tasks.train_model">openstef.tasks.train_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.train_model.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.tasks.html#openstef.tasks.train_model.train_model_task"><code class="docutils literal notranslate"><span class="pre">train_model_task()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.tasks.html#module-openstef.tasks">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.validation.html">openstef.validation package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="openstef.validation.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.validation.html#module-openstef.validation.validation">openstef.validation.validation module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.validation.html#openstef.validation.validation.calc_completeness_dataframe"><code class="docutils literal notranslate"><span class="pre">calc_completeness_dataframe()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.validation.html#openstef.validation.validation.calc_completeness_features"><code class="docutils literal notranslate"><span class="pre">calc_completeness_features()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.validation.html#openstef.validation.validation.detect_ongoing_zero_flatliner"><code class="docutils literal notranslate"><span class="pre">detect_ongoing_zero_flatliner()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.validation.html#openstef.validation.validation.drop_target_na"><code class="docutils literal notranslate"><span class="pre">drop_target_na()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.validation.html#openstef.validation.validation.is_data_sufficient"><code class="docutils literal notranslate"><span class="pre">is_data_sufficient()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.validation.html#openstef.validation.validation.validate"><code class="docutils literal notranslate"><span class="pre">validate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.validation.html#module-openstef.validation">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-openstef.app_settings">
+<span id="openstef-app-settings-module"></span><h2>openstef.app_settings module<a class="headerlink" href="#module-openstef.app_settings" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="openstef.app_settings.AppSettings">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.app_settings.</span></span><span class="sig-name descname"><span class="pre">AppSettings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_case_sensitive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PosixPath('.')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_file_encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_ignore_empty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_nested_delimiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_parse_none_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_env_parse_enums</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_prog_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_parse_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_settings_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_parse_none_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_hide_none_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_avoid_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_enforce_required</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_use_class_docs_for_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_cli_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_secrets_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.app_settings.AppSettings" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseSettings</span></code></p>
+<p>Global app settings.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.app_settings.AppSettings.log_level">
+<span class="sig-name descname"><span class="pre">log_level</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#openstef.app_settings.AppSettings.log_level" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.app_settings.AppSettings.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#openstef.app_settings.AppSettings.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.app_settings.AppSettings.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">SettingsConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'arbitrary_types_allowed':</span> <span class="pre">True,</span> <span class="pre">'case_sensitive':</span> <span class="pre">False,</span> <span class="pre">'cli_avoid_json':</span> <span class="pre">False,</span> <span class="pre">'cli_enforce_required':</span> <span class="pre">False,</span> <span class="pre">'cli_hide_none_type':</span> <span class="pre">False,</span> <span class="pre">'cli_parse_args':</span> <span class="pre">None,</span> <span class="pre">'cli_parse_none_str':</span> <span class="pre">None,</span> <span class="pre">'cli_prefix':</span> <span class="pre">'',</span> <span class="pre">'cli_prog_name':</span> <span class="pre">None,</span> <span class="pre">'cli_settings_source':</span> <span class="pre">None,</span> <span class="pre">'cli_use_class_docs_for_groups':</span> <span class="pre">False,</span> <span class="pre">'env_file':</span> <span class="pre">'.env',</span> <span class="pre">'env_file_encoding':</span> <span class="pre">None,</span> <span class="pre">'env_ignore_empty':</span> <span class="pre">False,</span> <span class="pre">'env_nested_delimiter':</span> <span class="pre">None,</span> <span class="pre">'env_parse_enums':</span> <span class="pre">None,</span> <span class="pre">'env_parse_none_str':</span> <span class="pre">None,</span> <span class="pre">'env_prefix':</span> <span class="pre">'openstef_',</span> <span class="pre">'extra':</span> <span class="pre">'ignore',</span> <span class="pre">'json_file':</span> <span class="pre">None,</span> <span class="pre">'json_file_encoding':</span> <span class="pre">None,</span> <span class="pre">'protected_namespaces':</span> <span class="pre">('model_',</span> <span class="pre">'settings_'),</span> <span class="pre">'secrets_dir':</span> <span class="pre">None,</span> <span class="pre">'toml_file':</span> <span class="pre">None,</span> <span class="pre">'validate_default':</span> <span class="pre">True,</span> <span class="pre">'yaml_file':</span> <span class="pre">None,</span> <span class="pre">'yaml_file_encoding':</span> <span class="pre">None}</span></em><a class="headerlink" href="#openstef.app_settings.AppSettings.model_config" title="Link to this definition">¶</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.app_settings.AppSettings.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'log_level':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=False,</span> <span class="pre">default='INFO',</span> <span class="pre">description='Log</span> <span class="pre">level</span> <span class="pre">used</span> <span class="pre">for</span> <span class="pre">logging</span> <span class="pre">statements.'),</span> <span class="pre">'post_teams_messages':</span> <span class="pre">FieldInfo(annotation=bool,</span> <span class="pre">required=False,</span> <span class="pre">default=True)}</span></em><a class="headerlink" href="#openstef.app_settings.AppSettings.model_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo].</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.app_settings.AppSettings.post_teams_messages">
+<span class="sig-name descname"><span class="pre">post_teams_messages</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#openstef.app_settings.AppSettings.post_teams_messages" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-openstef.enums">
+<span id="openstef-enums-module"></span><h2>openstef.enums module<a class="headerlink" href="#module-openstef.enums" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="openstef.enums.ForecastType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.enums.</span></span><span class="sig-name descname"><span class="pre">ForecastType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.enums.ForecastType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.ForecastType.BASECASE">
+<span class="sig-name descname"><span class="pre">BASECASE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'basecase'</span></em><a class="headerlink" href="#openstef.enums.ForecastType.BASECASE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.ForecastType.DEMAND">
+<span class="sig-name descname"><span class="pre">DEMAND</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'demand'</span></em><a class="headerlink" href="#openstef.enums.ForecastType.DEMAND" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.ForecastType.SOLAR">
+<span class="sig-name descname"><span class="pre">SOLAR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'solar'</span></em><a class="headerlink" href="#openstef.enums.ForecastType.SOLAR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.ForecastType.WIND">
+<span class="sig-name descname"><span class="pre">WIND</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'wind'</span></em><a class="headerlink" href="#openstef.enums.ForecastType.WIND" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="openstef.enums.MLModelType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.enums.</span></span><span class="sig-name descname"><span class="pre">MLModelType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.enums.MLModelType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.MLModelType.ARIMA">
+<span class="sig-name descname"><span class="pre">ARIMA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'arima'</span></em><a class="headerlink" href="#openstef.enums.MLModelType.ARIMA" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.MLModelType.FLATLINER">
+<span class="sig-name descname"><span class="pre">FLATLINER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'flatliner'</span></em><a class="headerlink" href="#openstef.enums.MLModelType.FLATLINER" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.MLModelType.LGB">
+<span class="sig-name descname"><span class="pre">LGB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'lgb'</span></em><a class="headerlink" href="#openstef.enums.MLModelType.LGB" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.MLModelType.LINEAR">
+<span class="sig-name descname"><span class="pre">LINEAR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'linear'</span></em><a class="headerlink" href="#openstef.enums.MLModelType.LINEAR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.MLModelType.LINEAR_QUANTILE">
+<span class="sig-name descname"><span class="pre">LINEAR_QUANTILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'linear_quantile'</span></em><a class="headerlink" href="#openstef.enums.MLModelType.LINEAR_QUANTILE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.MLModelType.XGB">
+<span class="sig-name descname"><span class="pre">XGB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'xgb'</span></em><a class="headerlink" href="#openstef.enums.MLModelType.XGB" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.MLModelType.XGB_MULTIOUTPUT_QUANTILE">
+<span class="sig-name descname"><span class="pre">XGB_MULTIOUTPUT_QUANTILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'xgb_multioutput_quantile'</span></em><a class="headerlink" href="#openstef.enums.MLModelType.XGB_MULTIOUTPUT_QUANTILE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.MLModelType.XGB_QUANTILE">
+<span class="sig-name descname"><span class="pre">XGB_QUANTILE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'xgb_quantile'</span></em><a class="headerlink" href="#openstef.enums.MLModelType.XGB_QUANTILE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="openstef.enums.PipelineType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.enums.</span></span><span class="sig-name descname"><span class="pre">PipelineType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.enums.PipelineType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.PipelineType.FORECAST">
+<span class="sig-name descname"><span class="pre">FORECAST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'forecast'</span></em><a class="headerlink" href="#openstef.enums.PipelineType.FORECAST" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.PipelineType.HYPER_PARMATERS">
+<span class="sig-name descname"><span class="pre">HYPER_PARMATERS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'hyper_parameters'</span></em><a class="headerlink" href="#openstef.enums.PipelineType.HYPER_PARMATERS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="openstef.enums.PipelineType.TRAIN">
+<span class="sig-name descname"><span class="pre">TRAIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'train'</span></em><a class="headerlink" href="#openstef.enums.PipelineType.TRAIN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-openstef.exceptions">
+<span id="openstef-exceptions-module"></span><h2>openstef.exceptions module<a class="headerlink" href="#module-openstef.exceptions" title="Link to this heading">¶</a></h2>
+<p>Openstef custom exceptions.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="openstef.exceptions.ComponentForecastTooShortHorizonError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.exceptions.</span></span><span class="sig-name descname"><span class="pre">ComponentForecastTooShortHorizonError</span></span><a class="headerlink" href="#openstef.exceptions.ComponentForecastTooShortHorizonError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Component forecasts should be available for at least 30 hours in advance.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="openstef.exceptions.InputDataInsufficientError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.exceptions.</span></span><span class="sig-name descname"><span class="pre">InputDataInsufficientError</span></span><a class="headerlink" href="#openstef.exceptions.InputDataInsufficientError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#openstef.exceptions.InputDataInvalidError" title="openstef.exceptions.InputDataInvalidError"><code class="xref py py-class docutils literal notranslate"><span class="pre">InputDataInvalidError</span></code></a></p>
+<p>Insufficient input data.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="openstef.exceptions.InputDataInvalidError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.exceptions.</span></span><span class="sig-name descname"><span class="pre">InputDataInvalidError</span></span><a class="headerlink" href="#openstef.exceptions.InputDataInvalidError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Invalid input data.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="openstef.exceptions.InputDataOngoingZeroFlatlinerError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.exceptions.</span></span><span class="sig-name descname"><span class="pre">InputDataOngoingZeroFlatlinerError</span></span><a class="headerlink" href="#openstef.exceptions.InputDataOngoingZeroFlatlinerError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#openstef.exceptions.InputDataInvalidError" title="openstef.exceptions.InputDataInvalidError"><code class="xref py py-class docutils literal notranslate"><span class="pre">InputDataInvalidError</span></code></a></p>
+<p>All recent load measurements are zero.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="openstef.exceptions.InputDataWrongColumnOrderError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.exceptions.</span></span><span class="sig-name descname"><span class="pre">InputDataWrongColumnOrderError</span></span><a class="headerlink" href="#openstef.exceptions.InputDataWrongColumnOrderError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#openstef.exceptions.InputDataInvalidError" title="openstef.exceptions.InputDataInvalidError"><code class="xref py py-class docutils literal notranslate"><span class="pre">InputDataInvalidError</span></code></a></p>
+<p>Wrong column order input data.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="openstef.exceptions.ModelWithoutStDev">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.exceptions.</span></span><span class="sig-name descname"><span class="pre">ModelWithoutStDev</span></span><a class="headerlink" href="#openstef.exceptions.ModelWithoutStDev" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>A machine learning model should have a valid standard deviation.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="openstef.exceptions.NoPredictedLoadError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.exceptions.</span></span><span class="sig-name descname"><span class="pre">NoPredictedLoadError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'No</span> <span class="pre">predicted</span> <span class="pre">load</span> <span class="pre">found'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.exceptions.NoPredictedLoadError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>No predicted load for given datatime range.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="openstef.exceptions.NoRealisedLoadError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.exceptions.</span></span><span class="sig-name descname"><span class="pre">NoRealisedLoadError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'No</span> <span class="pre">realised</span> <span class="pre">load</span> <span class="pre">found'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.exceptions.NoRealisedLoadError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>No realised load for given datetime range.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="openstef.exceptions.OldModelHigherScoreError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.exceptions.</span></span><span class="sig-name descname"><span class="pre">OldModelHigherScoreError</span></span><a class="headerlink" href="#openstef.exceptions.OldModelHigherScoreError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Old model has a higher score then new model.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="openstef.exceptions.PredictionJobException">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.exceptions.</span></span><span class="sig-name descname"><span class="pre">PredictionJobException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.exceptions.PredictionJobException" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>One or more prediction jobs raised an exception.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="openstef.exceptions.SkipSaveTrainingForecasts">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.exceptions.</span></span><span class="sig-name descname"><span class="pre">SkipSaveTrainingForecasts</span></span><a class="headerlink" href="#openstef.exceptions.SkipSaveTrainingForecasts" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>If old model is better or too young, you don’t need to save the traing forcast.</p>
+</dd></dl>
+
+</section>
+<section id="module-openstef.settings">
+<span id="openstef-settings-module"></span><h2>openstef.settings module<a class="headerlink" href="#module-openstef.settings" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-openstef">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-openstef" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="api_reference.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">API reference</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="openstef.data_classes.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">openstef.data_classes package</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subpackages">
+   Subpackages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submodules">
+   Submodules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-openstef.app_settings">
+   openstef.app_settings module
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.app_settings.AppSettings">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       AppSettings
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.app_settings.AppSettings.log_level">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         AppSettings.log_level
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.app_settings.AppSettings.model_computed_fields">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         AppSettings.model_computed_fields
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.app_settings.AppSettings.model_config">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         AppSettings.model_config
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.app_settings.AppSettings.model_fields">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         AppSettings.model_fields
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.app_settings.AppSettings.post_teams_messages">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         AppSettings.post_teams_messages
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-openstef.enums">
+   openstef.enums module
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.enums.ForecastType">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ForecastType
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.ForecastType.BASECASE">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         ForecastType.BASECASE
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.ForecastType.DEMAND">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         ForecastType.DEMAND
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.ForecastType.SOLAR">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         ForecastType.SOLAR
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.ForecastType.WIND">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         ForecastType.WIND
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.enums.MLModelType">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       MLModelType
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.MLModelType.ARIMA">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         MLModelType.ARIMA
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.MLModelType.FLATLINER">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         MLModelType.FLATLINER
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.MLModelType.LGB">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         MLModelType.LGB
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.MLModelType.LINEAR">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         MLModelType.LINEAR
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.MLModelType.LINEAR_QUANTILE">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         MLModelType.LINEAR_QUANTILE
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.MLModelType.XGB">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         MLModelType.XGB
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.MLModelType.XGB_MULTIOUTPUT_QUANTILE">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         MLModelType.XGB_MULTIOUTPUT_QUANTILE
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.MLModelType.XGB_QUANTILE">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         MLModelType.XGB_QUANTILE
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.enums.PipelineType">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       PipelineType
+      </span>
+     </code>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.PipelineType.FORECAST">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         PipelineType.FORECAST
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.PipelineType.HYPER_PARMATERS">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         PipelineType.HYPER_PARMATERS
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.enums.PipelineType.TRAIN">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         PipelineType.TRAIN
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-openstef.exceptions">
+   openstef.exceptions module
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.exceptions.ComponentForecastTooShortHorizonError">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ComponentForecastTooShortHorizonError
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.exceptions.InputDataInsufficientError">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       InputDataInsufficientError
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.exceptions.InputDataInvalidError">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       InputDataInvalidError
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.exceptions.InputDataOngoingZeroFlatlinerError">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       InputDataOngoingZeroFlatlinerError
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.exceptions.InputDataWrongColumnOrderError">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       InputDataWrongColumnOrderError
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.exceptions.ModelWithoutStDev">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ModelWithoutStDev
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.exceptions.NoPredictedLoadError">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       NoPredictedLoadError
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.exceptions.NoRealisedLoadError">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       NoRealisedLoadError
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.exceptions.OldModelHigherScoreError">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       OldModelHigherScoreError
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.exceptions.PredictionJobException">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       PredictionJobException
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.exceptions.SkipSaveTrainingForecasts">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       SkipSaveTrainingForecasts
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-openstef.settings">
+   openstef.settings module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-openstef">
+   Module contents
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+<div class="tocsection sourcelink">
+    <a href="_sources/openstef.rst.txt">
+        <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+</div>
+
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2017-2023 Contributors to the OpenSTEF project.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">
+        PyData Sphinx Theme
+    </a>
+    0.12.0.
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.3.7.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>

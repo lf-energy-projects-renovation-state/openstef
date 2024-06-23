@@ -1,0 +1,101 @@
+openstef.model.regressors package
+=================================
+
+Submodules
+----------
+
+openstef.model.regressors.arima module
+--------------------------------------
+
+.. automodule:: openstef.model.regressors.arima
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openstef.model.regressors.custom\_regressor module
+--------------------------------------------------
+
+.. automodule:: openstef.model.regressors.custom_regressor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openstef.model.regressors.dazls module
+--------------------------------------
+
+.. automodule:: openstef.model.regressors.dazls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openstef.model.regressors.flatliner module
+------------------------------------------
+
+.. automodule:: openstef.model.regressors.flatliner
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openstef.model.regressors.lgbm module
+-------------------------------------
+
+.. automodule:: openstef.model.regressors.lgbm
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openstef.model.regressors.linear module
+---------------------------------------
+
+.. automodule:: openstef.model.regressors.linear
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openstef.model.regressors.linear\_quantile module
+-------------------------------------------------
+
+.. automodule:: openstef.model.regressors.linear_quantile
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openstef.model.regressors.regressor module
+------------------------------------------
+
+.. automodule:: openstef.model.regressors.regressor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openstef.model.regressors.xgb module
+------------------------------------
+
+.. automodule:: openstef.model.regressors.xgb
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openstef.model.regressors.xgb\_multioutput\_quantile module
+-----------------------------------------------------------
+
+.. automodule:: openstef.model.regressors.xgb_multioutput_quantile
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openstef.model.regressors.xgb\_quantile module
+----------------------------------------------
+
+.. automodule:: openstef.model.regressors.xgb_quantile
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: openstef.model.regressors
+   :members:
+   :undoc-members:
+   :show-inheritance:

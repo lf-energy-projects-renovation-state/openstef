@@ -1,0 +1,45 @@
+openstef.data\_classes package
+==============================
+
+Submodules
+----------
+
+openstef.data\_classes.data\_prep module
+----------------------------------------
+
+.. automodule:: openstef.data_classes.data_prep
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openstef.data\_classes.model\_specifications module
+---------------------------------------------------
+
+.. automodule:: openstef.data_classes.model_specifications
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openstef.data\_classes.prediction\_job module
+---------------------------------------------
+
+.. automodule:: openstef.data_classes.prediction_job
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+openstef.data\_classes.split\_function module
+---------------------------------------------
+
+.. automodule:: openstef.data_classes.split_function
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: openstef.data_classes
+   :members:
+   :undoc-members:
+   :show-inheritance:
