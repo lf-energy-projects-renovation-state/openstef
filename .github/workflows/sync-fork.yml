@@ -1,0 +1,85 @@
+name: Sync fork
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "15 3 * * *"   # Run every day at 3:15 UTC
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout fork's default branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          path: "fork"
+      - name: Checkout fork's configuration branch
+        uses: actions/checkout@v4
+        with:
+          path: "configuration"
+          ref: "renovate-and-workflow-files"
+      - name: Determine Upstream clone URL
+        id: upstream-repo-clone-url
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data } = await github.rest.repos.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            if (data.fork) {
+              return data.parent.clone_url;
+            } else {
+              throw new Error('This repository is not a fork.');
+            }
+          result-encoding: string
+      - name: Determine Upstream default branch
+        id: upstream-repo-default-branch
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data } = await github.rest.repos.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            if (data.fork) {
+              return data.parent.default_branch;
+            } else {
+              throw new Error('This repository is not a fork.');
+            }
+          result-encoding: string
+      - name: Sync fork with upstream
+        run: |
+          set -ex
+          cd fork
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add upstream ${{ steps.upstream-repo-clone-url.outputs.result }}
+          git fetch upstream ${{ steps.upstream-repo-default-branch.outputs.result }}
+          UPSTREAM_MOST_RECENT_COMMIT_HASH=$(git log upstream/${{ steps.upstream-repo-default-branch.outputs.result }} -n 1 --format="%H")
+          PREVIOUS_SYNC_COMMIT_HASH=$(cat ../configuration/upstream_commit_hash)
+          if [ "$PREVIOUS_SYNC_COMMIT_HASH" = "$UPSTREAM_MOST_RECENT_COMMIT_HASH" ]; then
+            echo "No need to sync, already up-to-date"
+            exit 0
+          fi
+          
+          git reset --hard upstream/${{ steps.upstream-repo-default-branch.outputs.result }}
+          # Enforce the usage of our own config (renovate.json5)
+          git rm renovate.json* || true
+          # Avoid problems where an existing .gitignore file would prevent committing our configuration files
+          git rm .gitignore || true
+          # Instead of using "cp -r", rsync allows us to exclude the .git directory
+          rsync -av --exclude '.git' ../configuration/ .
+          rm upstream_commit_hash
+          git add .
+          git commit -m "add Renovate and custom workflow files"
+          git push --force-with-lease
+          
+          cd ../configuration
+          # git config user.name "github-actions[bot]"
+          # git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo $UPSTREAM_MOST_RECENT_COMMIT_HASH > upstream_commit_hash
+          git add upstream_commit_hash
+          git commit -m "update commit hash to $UPSTREAM_MOST_RECENT_COMMIT_HASH"
+          git push
