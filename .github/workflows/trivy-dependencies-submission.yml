@@ -1,12 +1,12 @@
 name: SBOM upload from Trivy
 
 on:
-  push: {}
   workflow_dispatch: {}
+  schedule:
+    - cron: "0 9 */5 * *"   # Run every fifth day at 9 AM UTC
 
 jobs:
   SBOM-upload:
-    if: github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
