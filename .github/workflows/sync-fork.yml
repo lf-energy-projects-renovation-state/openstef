@@ -14,11 +14,13 @@ jobs:
         with:
           fetch-depth: 0
           path: "fork"
+          token: ${{ secrets.GH_PAT }}
       - name: Checkout fork's configuration branch
         uses: actions/checkout@v4
         with:
           path: "configuration"
           ref: "renovate-and-workflow-files"
+          token: ${{ secrets.GH_PAT }}
       - name: Determine Upstream clone URL
         id: upstream-repo-clone-url
         uses: actions/github-script@v7
