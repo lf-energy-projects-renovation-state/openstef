@@ -71,6 +71,8 @@ jobs:
           git rm renovate.json* || true
           # Avoid problems where an existing .gitignore file would prevent committing our configuration files
           git rm .gitignore || true
+          # Delete existing workflows, we don't need to run them in our fork
+          rm -rf .github || true
           # Instead of using "cp -r", rsync allows us to exclude the .git directory
           rsync -av --exclude '.git' ../configuration/ .
           rm upstream_commit_hash
