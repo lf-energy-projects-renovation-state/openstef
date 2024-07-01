@@ -6,7 +6,7 @@
 # This file is meant for convenient installation of test dependencies for developers.
 flake8
 autoflake==1.7.5
-bandit==1.7.4
+bandit==1.7.9
 black==23.9.1
 docformatter==1.5.0
 freezegun~=1.2.2
