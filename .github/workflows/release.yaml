@@ -27,7 +27,7 @@ jobs:
           persist-credentials: false
       # Setup
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
       # Bump and commit version. The upload to pypi step happens after github release.
