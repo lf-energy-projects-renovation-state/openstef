@@ -61,7 +61,7 @@ setup(
     ],
     extras_require={
         "cpu": [
-            "xgboost-cpu~=2.0"
+            "xgboost-cpu~=3.1"
         ],  # Add xgboost-cpu to avoid install large xgboost package when not using GPU
         "gpu": ["xgboost"],  # Needed to install xgboost with GPU support in normal case
         "mlflow-full": [
