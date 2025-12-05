@@ -11,7 +11,7 @@ numpy>=2,<3
 optuna~=3.1
 optuna-integration~=3.6
 pandas~=2.2.0
-plotly~=5.18
+plotly~=6.5
 pvlib==0.10.5
 pydantic~=2.4
 pydantic-settings~=2.3
