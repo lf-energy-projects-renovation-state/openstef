@@ -10,7 +10,7 @@ networkx~=3.1
 numpy>=2,<3
 optuna~=3.1
 optuna-integration~=3.6
-pandas~=2.2.0
+pandas~=2.3.3
 plotly~=5.18
 pvlib==0.10.5
 pydantic~=2.4
