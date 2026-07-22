@@ -21,7 +21,7 @@ jobs:
           github-pat: ${{ secrets.GITHUB_TOKEN }}  # this causes a curl call to upload the snapshot
 
       - name: Upload report file
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: trivy-results
           path: trivy-results.gsbom
