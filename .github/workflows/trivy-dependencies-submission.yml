@@ -1,0 +1,27 @@
+name: SBOM upload from Trivy
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 9 */5 * *"   # Run every fifth day at 9 AM UTC
+
+jobs:
+  SBOM-upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run Trivy vulnerability scanner in repo mode
+        uses: aquasecurity/trivy-action@0.23.0
+        with:
+          scan-type: 'fs'
+          ignore-unfixed: true
+          format: 'github'
+          output: 'trivy-results.gsbom'
+          github-pat: ${{ secrets.GITHUB_TOKEN }}  # this causes a curl call to upload the snapshot
+
+      - name: Upload report file
+        uses: actions/upload-artifact@v4
+        with:
+          name: trivy-results
+          path: trivy-results.gsbom
